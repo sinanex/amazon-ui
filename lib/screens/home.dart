@@ -12,16 +12,18 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(children: [
-        Container(
+      appBar: 
+      AppBar(
+        toolbarHeight: 73,
+        flexibleSpace:  Container(
           width: double.infinity,
-          height: 132,
+          height: 152,
+          
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(255, 10, 135, 184),
-                Color.fromARGB(255, 17, 236, 243),
+                  const Color.fromARGB(255, 72, 199, 241),
+              const Color.fromARGB(255, 148, 236, 193)
               ],
             ),
           ),
@@ -45,11 +47,14 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-        // Delivery Location Container
+      ),
+        body: SingleChildScrollView(
+      child: Column(children: [
+       
         Container(
           height: 50,
           width: double.infinity,
-          color: const Color.fromARGB(255, 129, 213, 232),
+          color:     const Color.fromARGB(255, 137, 217, 235),
           child: const Padding(
             padding: EdgeInsets.all(8.0),
             child: Row(
