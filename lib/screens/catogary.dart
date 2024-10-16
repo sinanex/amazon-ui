@@ -13,32 +13,32 @@ class _CatogaryPageState extends State<CatogaryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              const Color.fromARGB(255, 72, 199, 241)!,
-              const Color.fromARGB(255, 148, 236, 193)!
+              Color.fromARGB(255, 72, 199, 241),
+              Color.fromARGB(255, 148, 236, 193)
             ],
           ),
         ),
         child: ListView(
           children: [
             Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: TextField(
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: const Color.fromARGB(255, 250, 247, 247),
                     hintText: "Search Amazon.In",
-                    prefixIcon: Icon(Icons.search),
-                    suffixIcon: Icon(Icons.center_focus_weak),
+                    prefixIcon: const Icon(Icons.search),
+                    suffixIcon: const Icon(Icons.center_focus_weak),
                     border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Container(
                 decoration: BoxDecoration(
                     boxShadow: [

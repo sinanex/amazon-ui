@@ -15,10 +15,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int currentIndex = 0;
 
   final pages = [
-    HomeScreen(),
-    Account(),
-    Cart(),
-   CatogaryPage()
+    const HomeScreen(),
+    const Account(),
+    const Cart(),
+   const CatogaryPage(),
   ];
 
   @override

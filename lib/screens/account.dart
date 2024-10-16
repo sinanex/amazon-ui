@@ -90,7 +90,7 @@ class _AccountState extends State<Account> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [accBtn('Your Order'), accBtn("Buy Again")],
+                    children: [accBtn(text:'Your Orders',context: context), accBtn(text: "Buy Again")],
                   ),
                   const SizedBox(
                     height: 20,
@@ -98,8 +98,8 @@ class _AccountState extends State<Account> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      accBtn("Your Account"),
-                      accBtn("Your wish list")
+                      accBtn( text: "Your Account"),
+                      accBtn(text:  "Your wish list")
                     ],
                   ),
                   const SizedBox(
@@ -116,7 +116,7 @@ class _AccountState extends State<Account> {
                       Text(
                         "see all",
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Color.fromARGB(255, 33, 215, 243),
                           fontSize: 18,
                         ),
                       ),
@@ -148,7 +148,7 @@ class _AccountState extends State<Account> {
                       Spacer(),
                       Text(
                         "Edit    Browse History",
-                        style: TextStyle(color: Colors.blue, fontSize: 18),
+                        style: TextStyle(color: Color.fromARGB(255, 20, 197, 224), fontSize: 18),
                       ),
                     ],
                   ),
