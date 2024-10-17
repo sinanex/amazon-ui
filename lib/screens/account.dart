@@ -136,6 +136,8 @@ class _AccountState extends State<Account> {
                       ],
                     ),
                   ),
+                  Divider(thickness: 3,),
+                  SizedBox(height: 10,),
                   const Row(
                     children: [
                       Text(

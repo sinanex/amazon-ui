@@ -17,7 +17,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   final pages = [
     const HomeScreen(),
     const Account(),
-    const Cart(),
+    const CartScreen(),
    const CatogaryPage(),
   ];
 

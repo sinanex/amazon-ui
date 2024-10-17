@@ -66,25 +66,25 @@ class OdersPage extends StatelessWidget {
                 height: 20,
               ),
               Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    textRow('Your Orders'),
-                    Divider(),
-                    textRow('Subscribe & save')
-                  ],
-                ),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: Colors.grey)),
                 width: double.infinity,
                 height: 120,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    textRow('Your Orders'),
+                    const Divider(),
+                    textRow('Subscribe & save')
+                  ],
+                ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Align(
+              const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Account Settings ",
@@ -95,7 +95,6 @@ class OdersPage extends StatelessWidget {
                   )),
               Container(
                 width: double.infinity,
-                height: 482,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                     border: Border.all(
@@ -105,21 +104,24 @@ class OdersPage extends StatelessWidget {
                 child: Column(
                   children: [
                     textRow("Login & security"),
-                    Divider(),
+                    const Divider(),
                     textRow("Your Account"),
-                    Divider(),
+                    const Divider(),
           
                   textRow("Login with amazon"),
-                  Divider(),
+                  const Divider(),
                   textRow("Content and devices"),
-                  Divider(),
+                  const Divider(),
                   textRow("Manage Your Profiles"),
-                  Divider(),
+                  const Divider(),
                   textRow("Default Purchase Settings"),
-                  Divider(),
+                  const Divider(),
                   textRow("Manage Prime membership"),
-                  Divider(),
+                  const Divider(),
                   textRow("Membership & Subscription"),
+                  const Divider(),
+           
+
                   ],
                 ),
               )

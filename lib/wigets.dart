@@ -8,12 +8,13 @@ Widget accBtn({String? text, BuildContext? context}) {
     child: OutlinedButton(
         style: OutlinedButton.styleFrom(backgroundColor: Colors.grey[200]),
         onPressed: () {
-          Navigator.push(
-              context!, MaterialPageRoute(builder: (context) => const OdersPage()));
+          Navigator.push(context!,
+              MaterialPageRoute(builder: (context) => const OdersPage()));
         },
         child: Text(
           text!,
-          style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+          style:
+              const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         )),
   );
 }
@@ -111,5 +112,126 @@ Widget textRow(String text) {
       ),
       const Icon(Icons.chevron_right)
     ],
+  );
+}
+
+Widget containerBtn({required double width, required String text}) {
+  return Container(
+    decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(color: Colors.grey[300]!),
+        borderRadius: BorderRadius.circular(10)),
+    width: width,
+    height: 50,
+    child: Center(
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+  );
+}
+
+Widget itemContainer({
+  required String imagePath,
+  required String mainText,
+  required String date,
+  String? mrp,
+  String? price,
+}) {
+  return Padding(
+    padding: const EdgeInsets.all(3),
+    child: Container(
+      width: 200,
+      height: 360,
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset(
+                  imagePath,
+                  width: 120,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black.withOpacity(0.2)),
+                      borderRadius: BorderRadius.circular(50)),
+                  child: const Icon(Icons.more_vert),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              mainText,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const Text(
+                  "28%",
+                  style:
+                      TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                ),const SizedBox(width: 10,),
+                Text(
+                  price ?? '79,000',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 2,
+            ),
+             Row(
+               children: [
+                const Text("MRP : "),
+                 Text(mrp != null? mrp.toString() : '89,000' ),
+               ],
+             ),
+            const SizedBox(
+              height: 2,
+            ),
+            Text("Get it by $date FREE"),
+            const Text("Delivary by Amazon"),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              width: double.infinity,
+              height: 40,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.yellow[600],
+              ),
+              child: const Center(
+                  child: Text(
+                "Add to cart",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )),
+            )
+          ],
+        ),
+      ),
+    ),
   );
 }

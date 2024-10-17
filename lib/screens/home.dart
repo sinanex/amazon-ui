@@ -20,8 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  const Color.fromARGB(255, 72, 199, 241),
-                  const Color.fromARGB(255, 148, 236, 193)
+                  Color.fromARGB(255, 72, 199, 241),
+                  Color.fromARGB(255, 148, 236, 193)
                 ],
               ),
             ),
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Icon(Icons.location_on_outlined, size: 25),
                     SizedBox(width: 5),
                     Text(
-                      "Deliver to Shahin - Thenhippalam 673635",
+                      "Deliver to Sinan - Manjeri 676122",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                     ),
@@ -204,17 +204,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Card(
-                    child: Container(
+                    child: SizedBox(
+                      width: 200,
+                      height: 230,
                       child: Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: Text(
                               "Keep Shoping for",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 15,
                           ),
                           Image.asset(
@@ -223,16 +225,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           )
                         ],
                       ),
-                      width: 200,
-                      height: 230,
                     ),
                   ),
                   Card(
-                    child: Container(
+                    child: SizedBox(
+                      width: 200,
+                      height: 230,
                       child: Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                          const Padding(
+                            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
                             child: Text(
                               "deals Under 500\n Shoes",
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -244,8 +246,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           )
                         ],
                       ),
-                      width: 200,
-                      height: 230,
                     ),
                   ),
                 ],

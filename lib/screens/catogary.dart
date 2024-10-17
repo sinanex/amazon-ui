@@ -96,7 +96,23 @@ class _CatogaryPageState extends State<CatogaryPage> {
                   smallContainer(imagePath: 'assests/images/furniture-removebg-preview.png',text: 'Furniture'),
                 ],
               ),
-
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    containerBtn(width: 90, text: "Oreders"),
+                    containerBtn(width: 100, text: "Buy Again"),
+                    containerBtn(width: 90, text: "Account"),
+                    containerBtn(width: 70, text: "List")
+                  ],
+                ),
+                width: double.infinity,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25)),
+                ),
+              ),
             ],
            )
           ],
