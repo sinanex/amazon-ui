@@ -1,9 +1,8 @@
 import 'package:amazon/screens/account.dart';
-import 'package:amazon/screens/cart.dart';
+import 'package:amazon/screens/tabbar.dart';
 import 'package:amazon/screens/home.dart';
 import 'package:amazon/widget/wigets.dart';
 import 'package:flutter/material.dart';
-
 import 'catogary.dart';
 
 class OdersPage extends StatefulWidget {

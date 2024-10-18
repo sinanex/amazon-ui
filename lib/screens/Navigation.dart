@@ -1,5 +1,5 @@
 import 'package:amazon/screens/account.dart';
-import 'package:amazon/screens/cart.dart';
+import 'package:amazon/screens/tabbar.dart';
 import 'package:amazon/screens/catogary.dart';
 import 'package:amazon/screens/home.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,6 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int currentIndex = 0;
-
   final pages = [
     const HomeScreen(),
     const Account(),

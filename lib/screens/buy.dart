@@ -17,7 +17,7 @@ class BuyPage extends StatelessWidget {
                 const Text(
                   "Buy Again",
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
                     fontSize: 20,
                   ),
                 ),

@@ -71,7 +71,8 @@ class KeepShopping extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Nothing"));
+    return Scaffold(
+    );
   }
 }
 
@@ -80,6 +81,6 @@ class Spaced extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text("Space"));
+    return Scaffold();
   }
 }
