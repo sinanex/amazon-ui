@@ -1,9 +1,26 @@
-import 'package:amazon/wigets.dart';
+import 'package:amazon/screens/account.dart';
+import 'package:amazon/screens/cart.dart';
+import 'package:amazon/screens/home.dart';
+import 'package:amazon/widget/wigets.dart';
 import 'package:flutter/material.dart';
 
-class OdersPage extends StatelessWidget {
+import 'catogary.dart';
+
+class OdersPage extends StatefulWidget {
   const OdersPage({super.key});
 
+  @override
+  State<OdersPage> createState() => _OdersPageState();
+}
+
+class _OdersPageState extends State<OdersPage> {
+  int currentIndex = 1;
+  final pages = [
+    const HomeScreen(),
+    const Account(),
+    const CartScreen(),
+    const CatogaryPage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +63,32 @@ class OdersPage extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey,
+        currentIndex: currentIndex,
+        onTap: (index) {
+          Navigator.pop(context);
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: 'Me',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.menu),
+            label: 'Menu',
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -96,32 +139,28 @@ class OdersPage extends StatelessWidget {
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                  color: Colors.grey,
-                  
-                )),
+                      color: Colors.grey,
+                    )),
                 child: Column(
                   children: [
                     textRow("Login & security"),
                     const Divider(),
                     textRow("Your Account"),
                     const Divider(),
-          
-                  textRow("Login with amazon"),
-                  const Divider(),
-                  textRow("Content and devices"),
-                  const Divider(),
-                  textRow("Manage Your Profiles"),
-                  const Divider(),
-                  textRow("Default Purchase Settings"),
-                  const Divider(),
-                  textRow("Manage Prime membership"),
-                  const Divider(),
-                  textRow("Membership & Subscription"),
-                  const Divider(),
-           
-
+                    textRow("Login with amazon"),
+                    const Divider(),
+                    textRow("Content and devices"),
+                    const Divider(),
+                    textRow("Manage Your Profiles"),
+                    const Divider(),
+                    textRow("Default Purchase Settings"),
+                    const Divider(),
+                    textRow("Manage Prime membership"),
+                    const Divider(),
+                    textRow("Membership & Subscription"),
+                    const Divider(),
                   ],
                 ),
               )

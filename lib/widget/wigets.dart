@@ -18,6 +18,66 @@ Widget accBtn({String? text, BuildContext? context}) {
         )),
   );
 }
+Widget smallContainer({required String imagePath, required String text,double? height}) {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Stack(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.black.withOpacity(0.3)
+            ),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          width: 127,
+          height: 150,
+          child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                text,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: height,),
+              const SizedBox(height: 8),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  width: 170,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(60),topRight: Radius.circular(60)),
+                  gradient: LinearGradient(
+                colors: [
+                  const Color.fromARGB(255, 217, 236, 241),
+                  Colors.lightBlue[200]!,
+                ],
+              ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Positioned(
+          top: 60,
+          left: 10,
+          right: 10,
+          child: Image.asset(
+            imagePath,
+            width: 100,
+            height: 100,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+
 
 Widget imageCard(String imgPath, String text) {
   return Column(
@@ -39,6 +99,7 @@ Widget imageCard(String imgPath, String text) {
         text,
         style: const TextStyle(
           fontSize: 14,
+          fontWeight: FontWeight.bold
         ),
       ),
     ],
@@ -70,31 +131,7 @@ Widget containerCard({required String imagePath, required String text}) {
   );
 }
 
-Widget smallContainer({required String imagePath, required String text}) {
-  return Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Container(
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(10)),
-      width: 127,
-      height: 150,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Image.asset(
-            imagePath,
-            width: 90,
-          )
-        ],
-      ),
-    ),
-  );
-}
+
 
 Widget textRow(String text) {
   return Row(
@@ -164,8 +201,8 @@ Widget itemContainer({
                   width: 120,
                 ),
                 Container(
-                  width: 50,
-                  height: 50,
+                  width: 45,
+                  height: 45,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black.withOpacity(0.2)),
                       borderRadius: BorderRadius.circular(50)),
@@ -191,6 +228,7 @@ Widget itemContainer({
                   style:
                       TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
                 ),const SizedBox(width: 10,),
+                Text("₹"),
                 Text(
                   price ?? '79,000',
                   style: const TextStyle(
@@ -204,8 +242,10 @@ Widget itemContainer({
             ),
              Row(
                children: [
-                const Text("MRP : "),
-                 Text(mrp != null? mrp.toString() : '89,000' ),
+                const Text("MRP : ₹"),
+                 Text(mrp != null? mrp.toString() : '89,000',style: TextStyle(
+                  decoration: TextDecoration.lineThrough,
+                 ), ),
                ],
              ),
             const SizedBox(

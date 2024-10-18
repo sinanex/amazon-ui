@@ -68,12 +68,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            // Horizontal ListView for Images
             SizedBox(
               height: 120,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
+                  circleImage(image: Image.asset('assests/images/gif.jpeg'), text: "Deals"),
                   circleImage(
                     text: "Bazar",
                     image: Image.asset(
@@ -134,7 +134,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             CarouselSlider(
-              disableGesture: true,
               items: [
                 'assests/images/image1.jpg',
                 'assests/images/image3.jpg',
@@ -145,8 +144,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   builder: (BuildContext context) {
                     return SizedBox(
                       width: double.infinity,
-                      // margin: EdgeInsets.symmetric(horizontal: 5.0),
-
                       child: Center(
                         child: Image.asset(
                             e), // Pass 'e' to display different images
@@ -156,12 +153,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               }).toList(),
               options: CarouselOptions(
-                height: 350,
+                height: 400,
                 autoPlay: true,
                 enlargeCenterPage: true,
-                aspectRatio: 16 / 9,
-                autoPlayInterval: const Duration(seconds: 3),
-                viewportFraction: 0.8,
+                autoPlayInterval: const Duration(seconds: 2),
+                viewportFraction: 1,
               ),
             ),
             SingleChildScrollView(

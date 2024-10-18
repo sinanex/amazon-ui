@@ -1,4 +1,4 @@
-import 'package:amazon/wigets.dart';
+import 'package:amazon/widget/wigets.dart';
 import 'package:flutter/material.dart';
 
 class Cartpage2 extends StatefulWidget {

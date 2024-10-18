@@ -1,4 +1,4 @@
-import 'package:amazon/wigets.dart';
+import 'package:amazon/widget/wigets.dart';
 import 'package:flutter/material.dart';
 
 class Account extends StatefulWidget {
@@ -12,12 +12,11 @@ class _AccountState extends State<Account> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
+      appBar: AppBar(
+        toolbarHeight: 42,
+        flexibleSpace: Container(
               width: double.infinity,
-              height: 100,
+              height: 110,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -29,7 +28,7 @@ class _AccountState extends State<Account> {
               child: Column(
                 children: [
                   const SizedBox(
-                    height: 35,
+                    height: 40,
                   ),
                   Row(
                     children: [
@@ -56,8 +55,13 @@ class _AccountState extends State<Account> {
                 ],
               ),
             ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.all(12.0),
