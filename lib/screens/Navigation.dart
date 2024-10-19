@@ -1,8 +1,9 @@
 import 'package:amazon/screens/account.dart';
+import 'package:amazon/screens/catogary.dart'; // Make sure to import your OrdersPage here
 import 'package:amazon/screens/tabbar.dart';
-import 'package:amazon/screens/catogary.dart';
 import 'package:amazon/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -17,7 +18,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
     const HomeScreen(),
     const Account(),
     const CartScreen(),
-   const CatogaryPage(),
+    const CatogaryPage(),
   ];
 
   @override
@@ -26,7 +27,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey, 
+        unselectedItemColor: Colors.black,
         onTap: (index) {
           setState(() {
             currentIndex = index;
@@ -35,19 +36,19 @@ class _BottomNavigationState extends State<BottomNavigation> {
         currentIndex: currentIndex,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Iconsax.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
+            icon: Icon(Iconsax.user),
             label: 'Me',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
+            icon: Icon(Iconsax.shopping_cart),
+            label: 'Cart', 
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.menu),
+            icon: Icon(Iconsax.menu),
             label: 'Menu',
           ),
         ],

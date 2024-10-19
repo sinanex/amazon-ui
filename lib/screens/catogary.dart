@@ -156,6 +156,7 @@ class _CatogaryPageState extends State<CatogaryPage> {
             alignment: Alignment.bottomCenter,
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 10),
+              // ignore: sort_child_properties_last
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

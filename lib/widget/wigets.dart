@@ -49,7 +49,7 @@ Widget smallContainer({required String imagePath, required String text,double? h
                   width: 170,
                   height: 70,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(60),topRight: Radius.circular(60)),
+                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(60),topRight: Radius.circular(60)),
                   gradient: LinearGradient(
                 colors: [
                   const Color.fromARGB(255, 217, 236, 241),

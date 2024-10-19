@@ -13,13 +13,13 @@ class OdersPage extends StatefulWidget {
 }
 
 class _OdersPageState extends State<OdersPage> {
-  int currentIndex = 1;
-  final pages = [
-    const HomeScreen(),
-    const Account(),
-    const CartScreen(),
-    const CatogaryPage(),
-  ];
+  // int currentIndex = 1;
+  // final pages = [
+  //   const HomeScreen(),
+  //   const Account(),
+  //   const CartScreen(),
+  //   const CatogaryPage(),
+  // ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,32 +62,6 @@ class _OdersPageState extends State<OdersPage> {
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-        currentIndex: currentIndex,
-        onTap: (index) {
-          Navigator.pop(context);
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Me',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu),
-            label: 'Menu',
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
